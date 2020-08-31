@@ -1,4 +1,51 @@
 main
 {
     font-family: 'Raleway', sans-serif;
+    text-decoration-color: black;
+}
+header
+{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+}
+nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width:440px;
+    text-decoration: none;
+}
+nav ul
+{
+    list-style-type: none;
+    display:flex;
+    flex-direction:row;
+}
+nav li
+{
+    text-decoration: none;
+}
+li a
+{
+    padding:25px;
+    text-decoration: none;
+    color:black;
+}
+nav a:focus
+{
+    border-top: solid 1px #0065FC;
+    color: #0065FC;
+    text-decoration: none;
+}
+.subscription
+{
+    font-weight: bold;
+    color: #0065FC;
+}
+a
+{
+    text-decoration: none;
 }
