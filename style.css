@@ -64,7 +64,7 @@ p
 {
     font-size:0.75em;
 }
-.map
+.ico-map
 {
     color: black;
     background-color: #f2f2f2;
@@ -91,7 +91,7 @@ input[type=search]
     font-weight: bold;
     font-family:'Raleway', sans-serif;
 }
-button
+.btn-search
 {
     border-radius: 0px 15px 15px 0px;
     border: 0;
@@ -100,4 +100,54 @@ button
     color: white;
     font-family:'Raleway', sans-serif;
     font-weight: bold;
+}
+.filters
+{
+    display: flex;
+    padding-top: 30px;
+}
+.btn-filter
+{
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border:2px solid #d9d9d9;
+    border-left-style: none;
+    border-radius: 25px;
+    font-weight: bold;
+    padding-right: 15px;
+    padding-left: 0px;
+    margin-left:25px;
+}
+.ico-filter
+{
+    background-color: #deebff;
+    color:#0065fc;
+    border-radius: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+.information
+{
+    display:flex;
+    padding:40px 15px 40px 0px;
+}
+.ico-info
+{
+    color: #0065fc;
+    border:1px solid #f2f2f2;
+    border-radius: 30px;
+    padding: 10px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
