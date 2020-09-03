@@ -276,7 +276,7 @@ h2
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 5px 5px#d9d9d9;
-    width: 25%;
+    width: 23%;
     margin: 15px;
     box-sizing: border-box;
     display: flex;
@@ -320,4 +320,41 @@ h2
 .activity-banner h2
 {
     padding-left: 15px;
+}
+footer
+{
+    background-color:#f2f2f2;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+footer ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+footer ul li
+{
+    padding: 5px 0px 5px 0px;
+}
+footer a
+{
+    padding: 0;
+}
+.about
+{
+    width: 30%;
+}
+.our-accomodation
+{
+    width: 30%;
+}
+.help
+{
+    width: 30%;
 }
