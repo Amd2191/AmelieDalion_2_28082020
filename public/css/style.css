@@ -44,7 +44,12 @@ nav li {
     text-decoration: none;
 }
 
-a:visited {
+.accomodation a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.activities a:visited {
     text-decoration: none;
     color: black;
 }
@@ -76,7 +81,10 @@ a {
 .search {
     padding-left: 10px;
 }
-
+.search-ico
+{
+    display: none;
+}
 .search-button {
     height: 45px;
     max-width: 430px;
@@ -89,6 +97,7 @@ h1 {
     font-size: 1.2em;
     font-weight: bold;
     padding-left: 10px;
+    padding-top: 50px;
 }
 
 p {
@@ -268,8 +277,6 @@ h2 {
     color: #d9d9d9;
 }
 
-
-
 .title {
     display: flex;
     align-items: flex-start;
@@ -332,11 +339,6 @@ h2 {
 }
 
 
-
-h1 {
-    padding-top: 50px;
-}
-
 .display-more {
     padding-top: 40px;
 }
@@ -347,9 +349,10 @@ h1 {
 
 .activities {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    height: 500px;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 .activity-banner a {
@@ -359,40 +362,41 @@ h1 {
     flex-direction: column;
 }
 
-.activity-banner {
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 5px 5px#d9d9d9;
-    width: 23%;
-    margin: 15px;
+.activities-col-2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 445px;
+    justify-content: space-between;
 }
 
-.activity-banner:nth-child(1) {
-    height: 100%;
+.activity-banner {
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px#d9d9d9;
 }
 
-.activity-banner:nth-child(2) {
-    height: 50%;
+.size-img-1 {
+    max-height: 445px;
+    max-width: 300px;
 }
 
-.activity-banner:nth-child(3) {
-    height: 38%;
+.size-img-2 {
+    max-height: 240px;
+    max-width: 300px;
 }
 
-.activity-banner:nth-child(4) {
-    height: 100%;
+.size-img-3 {
+    max-height: 170px;
+    max-width: 300px;
 }
 
-.activity-banner:nth-child(5) {
-    height: 47%;
+.size-img-4 {
+    max-height: 200px;
+    max-width: 300px;
 }
 
-.activity-banner:nth-child(6) {
-    height: 41%;
+.size-img-5 {
+    max-height: 210px;
+    max-width: 300px;
 }
 
 .activity-banner img {
@@ -445,6 +449,44 @@ footer {
     width: 30%;
 }
 
+@media all and (max-width:1230px) {
+
+    .activities {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .size-img-1 {
+        max-height: 400px;
+        max-width: 270px;
+    }
+
+    .size-img-2 {
+        max-height: 240px;
+        max-width: 270px;
+    }
+
+    .size-img-3 {
+        max-height: 120px;
+        max-width: 270px;
+    }
+
+    .size-img-4 {
+        max-height: 160px;
+        max-width: 270px;
+    }
+
+    .size-img-5 {
+        max-height: 200px;
+        max-width: 270px;
+    }
+
+    .activities-col-2 {
+        height: 400px;
+
+    }
+}
+
 @media all and (max-width:1113px) {
     .width {
         max-width: 1113px;
@@ -453,6 +495,13 @@ footer {
     .banner-popular {
         display: flex;
         flex-direction: column;
+        position: static;
+        max-width: 236px;
+    }
+
+    .banner-popular a {
+        flex-direction: column;
+        max-width: 236px;
     }
 
     .popular-picture {
@@ -466,10 +515,42 @@ footer {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        overflow: hidden;
+        display: inline-block;
     }
 
     .popular-grade {
         position: static;
+    }
+
+    .size-img-1 {
+        max-height: 260px;
+        max-width: 220px;
+    }
+
+    .size-img-2 {
+        max-height: 150px;
+        max-width: 220px;
+    }
+
+    .size-img-3 {
+        max-height: 100px;
+        max-width: 220px;
+    }
+
+    .size-img-4 {
+        max-height: 100px;
+        max-width: 220px;
+    }
+
+    .size-img-5 {
+        max-height: 125px;
+        max-width: 220px;
+    }
+
+    .activities-col-2 {
+        height: 260px;
+
     }
 }
 
@@ -481,6 +562,7 @@ footer {
     .accomodation {
         display: flex;
         flex-direction: column;
+        padding-right: 10px;
     }
 
     .list-accomodations {
@@ -490,18 +572,40 @@ footer {
 
     .popular-display {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-    }
-
-    .banner-popular {
-        padding: 6px;
-        max-width: 235px;
     }
 
     .accomodation-description {
         flex-wrap: wrap;
     }
+}
+
+@media all and (max-width:913px) {
+
+    .size-img-2,
+    .size-img-3,
+    .size-img-4,
+    .size-img-5 {
+        max-height: 200px;
+        max-width: 335px;
+        margin-bottom: 25px;
+    }
+
+    .size-img-1 {
+        max-height: 425px;
+        max-width: 335px;
+        margin-bottom: 25px;
+    }
+
+    .activities {
+        flex-wrap: wrap;
+    }
+
+    .activities-col-2 {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
 }
 
 @media all and (max-width:848px) {
@@ -523,44 +627,31 @@ footer {
         flex-wrap: wrap;
     }
 
-    .popular-display {
-        flex-direction: column;
+    .accomodation-display {
+        justify-content: center;
     }
 
-    .banner-popular {
-        max-width: 700px;
-        flex-direction: row;
+    .popular-display {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .banner-accomodation {
-        max-width: 337px;
-        flex-direction: row;
+        margin-right: 15px;
     }
 
-    .popular-picture {
-        border-radius: 15px 0px 0px 15px;
-    }
-
-    .banner-popular .accomodation-description {
-        display: flex;
-        flex-direction: column;
+    .banner-popular {
+        margin-right: 15px;
     }
 }
 
-@media all and (max-width:482px) {
-
-    .width {
-        max-width: 482px;
+@media all and (max-width:682px) {
+    .activities {
+        justify-content: center;
     }
 
-    .popular-picture {
-        max-width: 130px;
-    }
-}
-
-@media all and (max-width:377px) {
-    .width {
-        max-width: 377px;
+    .size-img-1 {
+        max-height: 200px;
     }
 
     header {
@@ -581,13 +672,13 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         border-bottom: solid 2px #f2f2f2;
-        width: 100%;
         padding-top: 20px;
         padding-bottom: 25px;
         justify-content: space-between;
+        max-width: 682px;
     }
 
-    nav li a:hover {
+    nav li a:hover:not(.subscription) {
         border-bottom: solid 2px #0065FC;
         border-top: none;
         color: #0065FC;
@@ -595,7 +686,7 @@ footer {
     }
 
     li a {
-        padding: 25px 50px 25px 50px;
+        padding: 25px 42px 25px 42px;
     }
 
     .subscription {
@@ -610,10 +701,46 @@ footer {
         color: #0065FC;
         padding-right: 25px;
     }
+}
+
+@media all and (max-width:482px) {
+
+    .width {
+        max-width: 482px;
+    }
+    .search-ico
+    {
+        display: flex;
+    }
+    .search-text
+    {
+        display: none;
+    }
+    .btn-search {
+        border-radius: 10px;
+        background-color: #0065FC;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 1px;
+    }
+    form
+    {
+        position: relative;
+    }
+}
+
+@media all and (max-width:377px) {
+    .width {
+        max-width: 377px;
+    }
 
     .accomodation {
         flex-direction: column-reverse;
-        padding-left: 0px;
+        padding: 25px 0 0 0;
     }
 
     .list-accomodations {
@@ -622,7 +749,6 @@ footer {
 
     .banner-accomodation {
         max-width: 335px;
-        flex: auto;
         box-shadow: 0 0 15px#d9d9d9;
     }
 
@@ -636,18 +762,36 @@ footer {
         height: 115px;
     }
 
-    .activities {
-        flex-wrap: nowrap;
-        height: unset;
+    .banner-popular {
+        max-width: 335px;
+        margin-top: 20px;
+        flex-direction: row;
+        position: relative;
     }
 
-    .activity-banner {
-        width: 90%;
-        max-height: 200px;
+    .banner-popular a {
+        max-width: 345px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
+    }
+
+    .popular-picture {
+        max-width: 130px;
+        height: 130px;
+        border-radius: 15px 0px 0px 15px;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .popular-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .popular-grade {
+        position: absolute;
+        bottom: 15px;
     }
 
     .footer {
@@ -673,5 +817,8 @@ footer {
         width: 100%;
         padding-left: 25px;
         padding-top: 25px;
+    }
+    li a {
+        padding: 25px 50px 25px 50px;
     }
 }
