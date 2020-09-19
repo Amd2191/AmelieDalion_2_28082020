@@ -436,15 +436,7 @@ footer {
     padding: 0;
 }
 
-.about {
-    width: 30%;
-}
-
-.our-accomodation {
-    width: 30%;
-}
-
-.help {
+.about,.our-accomodation,.help {
     width: 30%;
 }
 
@@ -615,7 +607,6 @@ footer {
     .filters {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
     }
 
     .btn-filter {
@@ -653,6 +644,42 @@ footer {
         max-height: 200px;
     }
 
+    
+}
+
+@media all and (max-width:482px) {
+
+    .width {
+        max-width: 482px;
+    }
+
+    .search-ico {
+        display: flex;
+    }
+
+    .search {
+        flex-wrap: wrap;
+    }
+
+    .search-text {
+        display: none;
+    }
+
+    .btn-search {
+        border-radius: 10px;
+        background-color: #0065FC;
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 1px;
+    }
+
+    form {
+        position: relative;
+    }
     header {
         justify-content: center;
         flex-wrap: wrap;
@@ -690,56 +717,20 @@ footer {
 
 }
 
-@media all and (max-width:482px) {
-
-    .width {
-        max-width: 482px;
-    }
-
-    .search-ico {
-        display: flex;
-    }
-
-    .search {
-        flex-wrap: wrap;
-    }
-
-    .search-text {
-        display: none;
-    }
-
-    .btn-search {
-        border-radius: 10px;
-        background-color: #0065FC;
-        height: 45px;
-        width: 45px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        right: 1px;
-    }
-
-    form {
-        position: relative;
-    }
-}
-
 @media all and (max-width:377px) {
+
     .width {
         max-width: 377px;
     }
-
+    .subscription{
+        padding-right: 0px;
+    }
     li a {
-        padding: 25px 40px 25px 40px;
+        padding: 25px 35px 25px 35px;
     }
 
     nav ul{
         order:3
-    }
-    .activities
-    {
-        padding-right: 5px;
     }
 
     .accomodation {
@@ -767,7 +758,7 @@ footer {
     }
 
     .banner-popular {
-        max-width: 335px;
+        max-width: 330px;
         margin-top: 20px;
         flex-direction: row;
         position: relative;
@@ -808,20 +799,17 @@ footer {
     }
 
     .about {
-        width: 100%;
         padding-left: 25px;
+        width: 78%;
+
     }
 
-    .our-accomodation {
-        width: 100%;
+    .our-accomodation,.help {
         padding-left: 25px;
         padding-top: 25px;
-    }
+        width: 78%;
 
-    .help {
-        width: 100%;
-        padding-left: 25px;
-        padding-top: 25px;
+
     }
 
 }
