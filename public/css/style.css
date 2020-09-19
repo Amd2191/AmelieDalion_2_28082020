@@ -643,8 +643,6 @@ footer {
     .size-img-1 {
         max-height: 200px;
     }
-
-    
 }
 
 @media all and (max-width:482px) {
@@ -693,7 +691,7 @@ footer {
         padding-top: 20px;
         padding-bottom: 25px;
         justify-content: space-between;
-        max-width: 682px;
+        max-width: 482px;
     }
     nav li a:hover {
         border-bottom: solid 2px #0065FC;
