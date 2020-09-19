@@ -8,6 +8,28 @@ main {
     max-width: 100%;
 }
 
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 50px;
+}
+
+p {
+    font-size: 0.75em;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 1em;
+    padding-top: 10px;
+}
+
 .width {
     max-width: 1350px;
     margin: auto;
@@ -15,28 +37,32 @@ main {
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-end;
     height: 80px;
     margin: auto;
 }
 
 .logo {
     padding-left: 25px;
+    margin-right: auto;
+
 }
 
 nav {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
     align-items: center;
     max-width: 440px;
+}
+nav li a:hover {
+    border-top: solid 1px #0065FC;
+    color: #0065FC;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
+    align-self: flex-end;
     margin-top: 0px;
 }
 
@@ -60,50 +86,28 @@ li a {
     color: black;
 }
 
-nav li a:hover:not(.subscription) {
-    border-top: solid 1px #0065FC;
-    color: #0065FC;
-}
-
-li .subscription {
+.subscription {
     font-weight: bold;
     color: #0065FC;
-}
-
-.subscription-mobile {
-    display: none;
-}
-
-a {
-    text-decoration: none;
+    order:3;
+    display: flex;
+    padding-right: 10px;
 }
 
 .search {
     padding-left: 10px;
 }
-.search-ico
-{
+
+.search-ico {
     display: none;
 }
+
 .search-button {
     height: 45px;
     max-width: 430px;
     display: flex;
     padding-left: 10px;
     padding-top: 20px;
-}
-
-h1 {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-top: 50px;
-}
-
-p {
-    font-size: 0.75em;
-    padding-left: 10px;
-    padding-top: 5px;
 }
 
 .ico-map {
@@ -143,10 +147,6 @@ input[type=search] {
     font-weight: bold;
 }
 
-h2 {
-    font-size: 1em;
-    padding-top: 10px;
-}
 
 .filters {
     display: flex;
@@ -232,7 +232,7 @@ h2 {
     justify-content: space-between;
 }
 
-.accomodation h1 {
+.accomodation h2 {
     padding: 0px;
     margin: 0px;
 }
@@ -408,7 +408,7 @@ h2 {
     border-top-right-radius: 15px;
 }
 
-.activity-banner h2 {
+.activity-banner h3{
     padding: 15px 15px 15px 5px;
 }
 
@@ -655,21 +655,13 @@ footer {
     }
 
     header {
-        flex-direction: column;
+        justify-content: center;
         flex-wrap: wrap;
         padding-left: 0px;
         height: auto;
     }
 
-    .mobile-nav {
-        display: flex;
-        align-self: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
     nav {
-        flex-direction: column;
         flex-wrap: wrap;
         border-bottom: solid 2px #f2f2f2;
         padding-top: 20px;
@@ -677,8 +669,7 @@ footer {
         justify-content: space-between;
         max-width: 682px;
     }
-
-    nav li a:hover:not(.subscription) {
+    nav li a:hover {
         border-bottom: solid 2px #0065FC;
         border-top: none;
         color: #0065FC;
@@ -686,21 +677,18 @@ footer {
     }
 
     li a {
-        padding: 25px 42px 25px 42px;
+        padding: 25px 50px 25px 50px;
+    }
+    .logo{
+        margin: 0;
+        align-self: flex-start;
+    }
+    .subscription{
+        order:0;
+        padding-top: 20px;
+        padding-left: 100px;
     }
 
-    .subscription {
-        display: none;
-    }
-
-    .subscription-mobile {
-        display: flex;
-        justify-self: end;
-        align-self: center;
-        font-weight: bold;
-        color: #0065FC;
-        padding-right: 25px;
-    }
 }
 
 @media all and (max-width:482px) {
@@ -708,14 +696,19 @@ footer {
     .width {
         max-width: 482px;
     }
-    .search-ico
-    {
+
+    .search-ico {
         display: flex;
     }
-    .search-text
-    {
+
+    .search {
+        flex-wrap: wrap;
+    }
+
+    .search-text {
         display: none;
     }
+
     .btn-search {
         border-radius: 10px;
         background-color: #0065FC;
@@ -727,8 +720,8 @@ footer {
         position: absolute;
         right: 1px;
     }
-    form
-    {
+
+    form {
         position: relative;
     }
 }
@@ -736,6 +729,18 @@ footer {
 @media all and (max-width:377px) {
     .width {
         max-width: 377px;
+    }
+
+    li a {
+        padding: 25px 40px 25px 40px;
+    }
+
+    nav ul{
+        order:3
+    }
+    .activities
+    {
+        padding-right: 5px;
     }
 
     .accomodation {
@@ -771,13 +776,14 @@ footer {
 
     .banner-popular a {
         max-width: 345px;
+        min-width: 250px;
         display: flex;
         flex-direction: row;
     }
 
     .popular-picture {
         max-width: 130px;
-        height: 130px;
+        height: 134px;
         border-radius: 15px 0px 0px 15px;
         overflow: hidden;
         display: inline-block;
@@ -798,7 +804,7 @@ footer {
         flex-direction: column;
     }
 
-    .footer h2 {
+    .footer h3 {
         padding-bottom: 10px;
     }
 
@@ -818,7 +824,5 @@ footer {
         padding-left: 25px;
         padding-top: 25px;
     }
-    li a {
-        padding: 25px 50px 25px 50px;
-    }
+
 }
